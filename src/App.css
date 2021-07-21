@@ -1,38 +1,215 @@
 .App {
   text-align: center;
+  padding-top: 150px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  font-weight: bold;
+  font-family: sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.noTask, .tasks {
+  border-top: 6px double grey;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.noTask {
+  padding-top: 20px;
+}
+
+.formInput, .formButton {
+  width: 300px;
+}
+
+.plus, .noTask, .noTaskSwitcher {
+  font-weight: normal;
+}
+
+.taskSwitcher {
+  border: 2px solid grey;
+  padding: 20px;
+  height: auto;
+  min-width: 500px;
+  margin: 50px;
+}
+
+.formButton, .mainHead, .taskNameQuery button {
+  color: white;
+  border: none;
+}
+
+.head, .mainHead, .task {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+.addTask .tsRight {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.addTask .tsLeft {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.addTask button {
+  color: green;
+  border: 2px solid green;
+  background-color: white;
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.addTask .tsLeft:hover {
+  background-color: green;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.addTask .tsRight:hover {
+  border: 2px solid darkred;
+  background-color: darkred;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.showAddTask {
+  width: 500px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.showAddTask {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  backdrop-filter: blur(5px);
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.formButton:active, .taskSwitcher{
+  background-color: white;
+}
+
+.task {
+  background-color: lightgray;
+  margin-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-left: 5px solid lightgray;
+}
+
+.task div {
+  text-align: left;
+}
+
+.hiddenAddTask {
+  display: none;
+}
+
+.selected {
+  border-left: 5px solid green;
+}
+
+.formInput, .formButton{
+  margin-bottom: 10px;
+  height: 50px;
+}
+
+.formInput {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.formInput, .taskNameQuery input {
+  border: 2px solid rgb(70, 70, 70);
+  padding-left: 5px;
+}
+
+.formButton, .mainHead, .taskNameQuery button {
+  background-color: black;
+}
+
+.formButton {
+  margin-top: 5px;
+}
+
+.formButton:hover {
+  background-color: rgb(41, 41, 41);
+}
+
+.right {
+  color: red;
+}
+
+.plus, .right, .task div {
+  cursor: pointer;
+}
+
+.taskSwitchers {
+  display: flex;
+  overflow-x: auto;
+}
+
+.mainHead, .taskNameQuery {
+  position: fixed;
+}
+
+.mainHead {
+  top: 0px;
+  left: 0px;
+  padding: 20px;
+  width: 100%;
+  font-size: 25px;
+}
+
+.taskNameQuery {
+  top: 70px;
+  right: 0px;
+  display: inline;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: -10px 10px 35px grey;
+  padding: 10px;
+  
+}
+
+.plus {
+  margin-right: 50px;
+}
+
+.plus img {
+  filter: invert();
+}
+
+.blur {
+  filter: blur(7px);
+}
+
+.formInput, .formButton, .taskNameQuery, .taskSwitcher,
+.taskNameQuery button, .taskNameQuery input {
+  border-radius: 10px;
+}
+
+
+.hide {
+  display: none;
+}
+
+.taskNameQuery div {
+  border-bottom: 6px double rgb(82, 82, 82);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.taskNameQuery input, .taskNameQuery button{
+  width:300px;
+  margin-bottom: 10px;
+  height: 40px;
+}
+
+.mainTitle {
+  margin-left: 40px;
+}
+
+.taskHead {
+  margin-right: 50px;
 }
